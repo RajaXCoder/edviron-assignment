@@ -10,7 +10,10 @@ const {
   getTransactionsBySchool,
   getTransactionStatus,
   updateTransactionStatus,
+  createCollectRequest,
 } = require("./src/transactions/transaction");
+
+const authMiddleware = require("./src/middlewares/auth.middleware");
 
 const app = express();
 app.use(cors());
@@ -31,9 +34,26 @@ const initialServer = () => {
 };
 // app.use("/api", routerTrans);
 app.post("/login", loginRoute);
-app.get("/", getAllTransactions);
-app.get("/school/:school_id", getTransactionsBySchool);
-app.get("/status/:custom_order_id", getTransactionStatus);
-app.post("/update-status", updateTransactionStatus);
+app.get("/transactions/", authMiddleware, getAllTransactions);
+app.get(
+  "/transactions/school/:school_id",
+  authMiddleware,
+  getTransactionsBySchool
+);
+app.get(
+  "/transactions/status/:custom_order_id",
+  authMiddleware,
+  getTransactionStatus
+);
+app.post(
+  "/transactions/update-status",
+  authMiddleware,
+  updateTransactionStatus
+);
+app.post(
+  "/payments/create-collect-request",
+  authMiddleware,
+  createCollectRequest
+);
 
 initialServer();

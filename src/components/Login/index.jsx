@@ -23,7 +23,7 @@ const Login = () => {
       const options = {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Ensure headers are set correctly
+          "Content-Type": "application/json", 
         },
         body: JSON.stringify(userDetails),
       };

@@ -7,7 +7,12 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      scale: {
+        102: "1.1",
+      },
+    },
   },
+
   plugins: [],
 };

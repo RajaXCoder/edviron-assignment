@@ -50,7 +50,7 @@ const Header = () => {
           {/* Logout button */}
           <button
             onClick={handleLogout}
-            className="lg:hidden px-4 py-2 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-all duration-300"
+            className="md:hidden px-4 py-2 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-all duration-300"
           >
             <FiLogOut className="text-xl" />
           </button>
@@ -58,7 +58,7 @@ const Header = () => {
           {/* Logout button text (only visible on sm and larger screens) */}
           <button
             onClick={handleLogout}
-            className="hidden sm:inline-block px-4 py-2 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-all duration-300"
+            className="hidden md:inline-block px-4 py-2 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-all duration-300"
           >
             Logout
           </button>

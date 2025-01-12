@@ -26,7 +26,7 @@ const Home = () => {
   useEffect(() => {
     const apiCall = async () => {
       try {
-        setApiStatus(apiConst.inProgress); // Set loading state
+        setApiStatus(apiConst.inProgress);
 
         const jwtToken = Cookies.get("jwt_token");
         const res = await axios.get(

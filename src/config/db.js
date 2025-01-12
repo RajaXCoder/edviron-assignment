@@ -6,7 +6,6 @@ const dbName = "test";
 
 let db = null;
 
-// Function to connect to MongoDB and return the collection
 const connectDB = async () => {
   if (db) return db; // Reuse the existing connection
 

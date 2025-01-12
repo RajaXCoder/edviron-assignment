@@ -29,7 +29,7 @@ const Home = () => {
         setApiStatus(apiConst.inProgress); // Set loading state
 
         const jwtToken = Cookies.get("jwt_token");
-        const res = await axios.get("http://localhost:3000/transactions/", {
+        const res = await axios.get("https://raja-edviron-server.onrender.com/transactions/", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
             "Content-Type": "application/json",

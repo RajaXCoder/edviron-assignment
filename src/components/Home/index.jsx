@@ -30,7 +30,7 @@ const Home = () => {
 
         const jwtToken = Cookies.get("jwt_token");
         const res = await axios.get(
-          "https://raja-edviron-server.onrender.com/transactions",
+          "https://raja-edviron-server.onrender.com/transactions/",
           {
             headers: {
               Authorization: `Bearer ${jwtToken}`,

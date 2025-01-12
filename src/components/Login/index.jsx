@@ -23,15 +23,17 @@ const Login = () => {
       const options = {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", 
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(userDetails),
       };
 
       try {
-        const response = await fetch("http://localhost:3000/login", options); // Corrected URL
-        const data = await response.json(); // Uncommented to parse the response
-        console.log(data); // Log the parsed data
+        const response = await fetch(
+          "https://raja-edviron-server.onrender.com/login",
+          options
+        ); // Corrected URL
+        const data = await response.json();
 
         if (response.ok) {
           Cookies.set("jwt_token", data.token, { expires: 10 });
